@@ -25,5 +25,9 @@ public Items() {
 	{
 		return Itema.get(id);
 	}
+	public ArrayList<Item> getItemList()
+	{
+		return Itema;
+	}
 	
 }

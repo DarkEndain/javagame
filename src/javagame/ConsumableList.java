@@ -2,11 +2,10 @@ package javagame;
 
 import java.util.ArrayList;
 
-public class ConsumableList extends Consumable {
+public class ConsumableList{
 
 	public ConsumableList() {
-		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	public ArrayList<Consumable> consumableList = new ArrayList<Consumable>();
 	
