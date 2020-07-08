@@ -1,11 +1,29 @@
 package javagame;
 
-public class Items {
+import java.util.ArrayList;
+import java.util.Collection;
 
-	private int id;
-	private String name;
-	private String description;
-	private boolean inInventory;
-	private boolean usable;
+public class Items extends Item{
+
+	
+	
+
+
+public Items() {
+	// TODO Auto-generated constructor stub
+}
+	
+	public ArrayList<Item> Itema = new ArrayList<Item>();
+
+	Item Healpotion = new Item(0, "Healpotion", "Gibt dir Krass Hp", false, true);
+	
+	public void fillItem()
+	{
+	Itema.add(Healpotion);
+	}
+	public Item getItem(int id)
+	{
+		return Itema.get(id);
+	}
 	
 }

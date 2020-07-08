@@ -1,0 +1,28 @@
+package javagame;
+
+import java.util.ArrayList;
+
+public class ConsumableList extends Consumable {
+
+	public ConsumableList() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public ArrayList<Consumable> consumableList = new ArrayList<Consumable>();
+	
+	Consumable Healpotion = new Consumable(0, "Healpotion", "Gibt dir Krass Hp", false, true);
+	
+	public void fillList()
+	{
+		consumableList.add(Healpotion);
+	}
+	public Consumable getConsumable(int id)
+	{
+		return consumableList.get(id);
+	}
+	public ArrayList<Consumable> getConsumableList()
+	{
+		return consumableList;
+	}
+			
+}
