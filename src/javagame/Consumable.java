@@ -2,7 +2,7 @@ package javagame;
 
 public class Consumable extends Item{
 	
-	public Consumable(int id, String name, String description, boolean inInventory, boolean usable) {
+	public Consumable(int id, String name, String description, boolean inInventory, boolean usable, int restoredHealth) {
 		super(id, name, description, inInventory, usable);
 		// TODO Auto-generated constructor stub
 	}
@@ -16,5 +16,6 @@ public class Consumable extends Item{
 	private int amount;
 	private boolean inInventory;
 	private boolean usable;
+	private int restoredHealth;
 
 }
