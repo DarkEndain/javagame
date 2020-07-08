@@ -1,6 +1,6 @@
 package javagame;
 
-public class character {
+public class Character {
 
 	private String name;
 	private int hp;

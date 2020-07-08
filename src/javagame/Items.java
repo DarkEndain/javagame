@@ -1,6 +1,6 @@
 package javagame;
 
-public class items {
+public class Items {
 
 	private int id;
 	private String name;

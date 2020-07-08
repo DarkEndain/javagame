@@ -1,6 +1,6 @@
 package javagame;
 
-public class consumables extends items{
+public class Consumables extends Items{
 	
 	private int id;
 	private String name;
