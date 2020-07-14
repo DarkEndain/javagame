@@ -17,7 +17,9 @@ public class Character {
 	private int resistence;
 	private int dodge;
 	private int initiative;
-	
+	private Inventory inventory;
+	private int gold;
+	private Attack attacklist[];
 	/*
 	 * Todo
 	 * Verknüpfung zum UNventar und zur Armory müssen noch hinzugefügt werden

@@ -9,7 +9,7 @@ public class ConsumableList{
 	}
 	public ArrayList<Consumable> consumableList = new ArrayList<Consumable>();
 	
-	Consumable Healpotion = new Consumable(0, "Healpotion", "Gibt dir Krass Hp", false, true,100);
+	Consumable Healpotion = new Consumable(0, "Healpotion", "Gibt dir Krass Hp", false, true,100, 200);
 	
 	public void fillList()
 	{

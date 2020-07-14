@@ -15,7 +15,7 @@ public Items() {
 	
 	public ArrayList<Item> Itema = new ArrayList<Item>();
 
-	Item Healpotion = new Item(0, "Healpotion", "Gibt dir Krass Hp", false, true);
+	Item Healpotion = new Item(0, "Healpotion", "Gibt dir Krass Hp", false, true,20);
 	
 	public void fillItem()
 	{
