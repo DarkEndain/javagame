@@ -4,25 +4,31 @@ import java.util.ArrayList;
 public class AttackList {
 
 	//AttackList
-	ArrayList<Attack> attackList = new ArrayList<>();
-	
+	ArrayList<Attack> charackterAttackList = new ArrayList<>();
+	ArrayList<Attack> enemyList = new ArrayList<>();
 	//Konstruktor
 	public AttackList() {}
 	
+	//Liste der Attacken
+
+	Attack bite = new Attack("Bite", "A vicious bite! Let's hope you don't get rabies!", 0, 50, 0, false, false);
+	
+	
+	
+	//Ende der Liste von Attacken
 	//Funktionen
 	public void fillList()
-	{
-		Attack bite = new Attack("Bite", "A vicious bite! Let's hope you don't get rabies!", 0, 50, 0, false, false);
-		attackList.add(bite);
+	{	
+		enemyList.add(bite);
 	}
 	
-	public ArrayList<Attack> getAttackList()
+	public ArrayList<Attack> getEnemyAttackList()
 	{
-		return attackList;
+		return enemyList;
 	}
 	
 	public Attack learnAttack(int id)
 	{
-		return attackList.get(id);
+		return charackterAttackList.get(id);
 	}
 }

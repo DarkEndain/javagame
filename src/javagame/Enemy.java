@@ -31,14 +31,14 @@ public class Enemy {
 	private ArrayList<Attack> attacks = new ArrayList<>();
 	
 	//Lootlists
-	private ArrayList<Items> qLoot = new ArrayList<>();	
+	private ArrayList<ItemList> qLoot = new ArrayList<>();	
 	private ArrayList<Consumable> cLoot = new ArrayList<>();
 	private ArrayList<Equipment> eLoot = new ArrayList<>();
 	
 	//Konstruktoren
 	public Enemy() {}
 	public Enemy(String name, String description, int id, int hp, int mp, int baseStrength, int baseIntellect, int baseAgility, int baseLuck,
-				 int armor, int resistance, int dodge, int initiative, int spawnrate, int droppedGold, ArrayList<Attack> attacks, ArrayList<Items> qLoot,
+				 int armor, int resistance, int dodge, int initiative, int spawnrate, int droppedGold, ArrayList<Attack> attacks, ArrayList<Item> qLoot,
 				 ArrayList<Consumable> cLoot, ArrayList<Equipment> eLoot) 
 	{
 		this.name=name;
@@ -46,7 +46,7 @@ public class Enemy {
 		this.hp=hp;
 		this.mp=mp;
 		this.baseStrength=baseStrength;
-		this.baseIntelect=baseIntellect;
+		this.baseIntelect=baseIntelect;
 		this.baseAgility=baseAgility;
 		this.baseLuck=baseLuck;
 		this.armor=armor;
@@ -111,7 +111,7 @@ public class Enemy {
 	public ArrayList<Attack> getAttacks() {
 		return attacks;
 	}
-	public ArrayList<Items> getqLoot() {
+	public ArrayList<ItemList> getqLoot() {
 		return qLoot;
 	}
 	public ArrayList<Consumable> getcLoot() {

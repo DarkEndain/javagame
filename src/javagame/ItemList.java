@@ -3,13 +3,13 @@ package javagame;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Items extends Item{
+public class ItemList extends Item{
 
 	
 	
 
 
-public Items() {
+public ItemList() {
 	// TODO Auto-generated constructor stub
 }
 	
@@ -29,5 +29,6 @@ public Items() {
 	{
 		return Itema;
 	}
+
 	
 }

@@ -25,7 +25,7 @@ public class Shop {
 		if (playergold > item.getCost())
 		{
 			playergold =- item.getCost();
-			addItem(item);
+			
 			return playergold;
 		}
 		else
