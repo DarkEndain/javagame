@@ -8,6 +8,7 @@ public class Inventory {
 	private ArrayList<Consumable>  consumables = new ArrayList<Consumable>();
 	//Todo SlotId in Kommentar festlegen
 	private ArrayList<Equipment> armor = new ArrayList<Equipment>();
+	private ArrayList<Item> questitem = new ArrayList<Item>();
 	
 	//Add a Item to the Inventory
 	public void addItem(Item item)
@@ -20,14 +21,29 @@ public class Inventory {
 		{
 			armor.add((Equipment) item);
 		}
+		else if(item instanceof Item)
+		{
+			questitem.add((Item) item);
+		}
 		
 	}
 	
-	//Delete a Item from the Inventory
-	/*private void deleteItem(ItemList item)
+	
+	private void deleteItem(Item item)
 	{
-		Inventory.remove(item);
-	}*/
+		if(item instanceof Consumable)
+		{
+			consumables.remove((Consumable) item);
+		}
+		else if(item instanceof Equipment)
+		{
+			armor.remove((Equipment) item);
+		}
+		else if(item instanceof Item)
+		{
+			questitem.remove((Item) item);
+		}
+	}
 	
 	public ArrayList<Consumable> returnConsumableInventory()
 	{
@@ -36,5 +52,9 @@ public class Inventory {
 	public ArrayList<Equipment> returnArmoryInventory()
 	{
 		return armor;
+	}
+	public ArrayList<Item> returnQuestItem()
+	{
+		return questitem;
 	}
 }
