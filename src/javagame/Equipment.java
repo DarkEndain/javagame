@@ -1,4 +1,4 @@
-bnpackage javagame;
+package javagame;
 
 public class Equipment extends Item {
 
@@ -26,9 +26,9 @@ public class Equipment extends Item {
 			boolean equipped, boolean isTwoHanded, int hp, int mp, int baseStrength, int baseIntelect, int baseAgility,
 			int baseLuck, int armor, int resistance, int dodge, int initiative) {
 		super(id, name, description, inInventory, usable, cost);
-		this.slotId = slotId;
-		this.equipped = equipped;
-		this.isTwoHanded = isTwoHanded;
+		this.setSlotId(slotId);
+		this.setEquipped(equipped);
+		this.setTwoHanded(isTwoHanded);
 		this.hp = hp;
 		this.mp = mp;
 		this.baseStrength = baseStrength;
@@ -39,6 +39,24 @@ public class Equipment extends Item {
 		this.resistance = resistance;
 		this.dodge = dodge;
 		this.initiative = initiative;
+	}
+	public boolean isEquipped() {
+		return equipped;
+	}
+	public void setEquipped(boolean equipped) {
+		this.equipped = equipped;
+	}
+	public boolean isTwoHanded() {
+		return isTwoHanded;
+	}
+	public void setTwoHanded(boolean isTwoHanded) {
+		this.isTwoHanded = isTwoHanded;
+	}
+	public int getSlotId() {
+		return slotId;
+	}
+	public void setSlotId(int slotId) {
+		this.slotId = slotId;
 	}
 	
 	

@@ -56,12 +56,15 @@ public class Enemy {
 		this.spawnrate=spawnrate;
 		this.droppedGold=droppedGold;
 		this.attacks=attacks;
-		this.qLoot=qLoot;
+		//this.qLoot=qLoot;
 		this.cLoot=cLoot;
 		this.eLoot=eLoot;
 		
 	}
 	
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
 	//Getter
 	public String getName() {
 		return name;

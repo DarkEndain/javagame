@@ -5,33 +5,34 @@ public class EnemyList {
 
 	//EnemyList
 	ArrayList<Enemy> enemyList = new ArrayList<>();
-	AttackList aList = new AttackList();
 	
 	//Konstruktor
-	public EnemyList(AttackList aList) {
+	public EnemyList() {
 		
-		this.aList = aList;
+	
 	}
 	
 	
 	
 	
 	//Funktionen
-	public void fillList()
+	public void fillList(AttackList aList)
 	{
 		aList.fillList();
 		ArrayList<Attack> attackList = new ArrayList<>();
-		for (int i = 0; i < 25; i++) {
-			attackList.add(aList.getEnemyAttackList().get(0));	
-		}
+
 		ArrayList<Consumable> cLoot = new ArrayList<>();
-		cLoot=getConsumableList(0);
+		//cLoot=getConsumableList(0);
 		ArrayList<Equipment> eLoot = new ArrayList<>();
-		eLoot=getEquipmentList(0);
+		//eLoot=getEquipmentList(0);
 		ArrayList<Item> qLoot = new ArrayList<>();
-		qLoot=getItemList(0);
+		//qLoot=getItemList(0);
+		
+		for (int i = 0; i < 3; i++) {
+			attackList.add(aList.getEnemyAttackList().get(i));	
+		}
 		Enemy wolf = new Enemy("Wolf", "A common forest wolf", 0, 500, 20, 5, 2, 10, 0, 0, 0, 10, 5, 50, 2,
-							   null, qLoot, cLoot, eLoot);
+							   attackList, qLoot, cLoot, eLoot);
 		enemyList.add(wolf);
 	}
 	
