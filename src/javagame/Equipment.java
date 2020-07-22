@@ -1,4 +1,4 @@
-package javagame;
+bnpackage javagame;
 
 public class Equipment extends Item {
 
