@@ -14,7 +14,7 @@ public class Enemy {
 	private int mp;
 	
 	private int baseStrength;
-	private int baseIntelect;
+	private int baseIntellect;
 	private int baseAgility;
 	private int baseLuck;
 	
@@ -46,7 +46,7 @@ public class Enemy {
 		this.hp=hp;
 		this.mp=mp;
 		this.baseStrength=baseStrength;
-		this.baseIntelect=baseIntelect;
+		this.baseIntellect=baseIntellect;
 		this.baseAgility=baseAgility;
 		this.baseLuck=baseLuck;
 		this.armor=armor;
@@ -82,7 +82,7 @@ public class Enemy {
 		return baseStrength;
 	}
 	public int getBaseIntelect() {
-		return baseIntelect;
+		return baseIntellect;
 	}
 	public int getBaseAgility() {
 		return baseAgility;
