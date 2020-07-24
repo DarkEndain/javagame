@@ -25,12 +25,12 @@ public class EnemyList {
 			attackList.add(aList.getEnemyAttackList().get(0));	
 		}
 		ArrayList<Consumable> cLoot = new ArrayList<>();
-		cLoot=getConsumableList();
+		//cLoot=getConsumableList();
 		ArrayList<Equipment> eLoot = new ArrayList<>();
-		eLoot=getEquipmentList();
+		//eLoot=getEquipmentList();
 		ArrayList<Item> qLoot = new ArrayList<>();
-		qLoot=getItemList();
-		Enemy wolf = new Enemy("Wolf", "A common forest wolf", 0, 500, 20, 5, 2, 10, 0, 0, 0, 10, 5, 50, 2,
+		//qLoot=getItemList();
+		//Enemy wolf = new Enemy("Wolf", "A common forest wolf", 0, 500, 20, 5, 2, 10, 0, 0, 0, 10, 5, 50, 2,
 							   null, qLoot, cLoot, eLoot);
 		enemyList.add(wolf);
 	}

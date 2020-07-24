@@ -38,7 +38,7 @@ public class Enemy {
 	//Konstruktoren
 	public Enemy() {}
 	public Enemy(String name, String description, int id, int hp, int mp, int baseStrength, int baseIntellect, int baseAgility, int baseLuck,
-				 int armor, int resistance, int dodge, int initiative, int spawnrate, int droppedGold, ArrayList<Attack> attacks, ArrayList<Item> qLoot,
+				 int armor, int resistance, int dodge, int initiative, int spawnrate, int droppedGold, ArrayList<Attack> attacks,
 				 ArrayList<Consumable> cLoot, ArrayList<Equipment> eLoot) 
 	{
 		this.name=name;
@@ -56,7 +56,7 @@ public class Enemy {
 		this.spawnrate=spawnrate;
 		this.droppedGold=droppedGold;
 		this.attacks=attacks;
-		this.qLoot=qLoot;
+	
 		this.cLoot=cLoot;
 		this.eLoot=eLoot;
 		
