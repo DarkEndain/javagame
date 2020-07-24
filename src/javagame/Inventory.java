@@ -45,15 +45,15 @@ public class Inventory {
 		}
 	}
 	
-	public ArrayList<Consumable> returnConsumableInventory()
+	public ArrayList<Consumable> getConsumableInventory()
 	{
 		return consumables;
 	}
-	public ArrayList<Equipment> returnArmoryInventory()
+	public ArrayList<Equipment> getArmoryInventory()
 	{
 		return armor;
 	}
-	public ArrayList<Item> returnQuestItem()
+	public ArrayList<Item> getQuestItem()
 	{
 		return questitem;
 	}
