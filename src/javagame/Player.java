@@ -154,5 +154,17 @@ public class Player {
 
 
 
+
+
+	public void setGold(int gold) {
+		this.gold = gold;
+	}
+
+
+	public void addItemToPlayerInventory(Item item)
+	{
+		this.inventory.addItem(item);
+	}
+
 	
 }

@@ -13,11 +13,12 @@ public class Start {
 		Player player = new Player();
 		AttackList attacklist = new AttackList();
 		attacklist.fillList();
-		EnemyList enemy = new EnemyList();
-		enemy.fillList(attacklist);
+		EnemyList enemy = new EnemyList(attacklist);
+		enemy.fillList();
 		ConsumableList consumable = new ConsumableList();
 		consumable.fillList();
-		
+		Shop shop = new Shop();
+		shop.fillStock(cList, eList);
 		inventory.addItem(consumable.getConsumable(0));
 
 		
@@ -32,10 +33,34 @@ public class Start {
 		System.out.println(enemy.summonEnemy(0).getName() + "erscheint vor dir");
 		Combat combat = new Combat(player, enemy.summonEnemy(0), attacklist, inventory);
 		
+		boolean running=true;
+		int action;
+		//START ROUTINE
+		while(running)
+		{
+			System.out.println("Hallo "+player.getName()+", wohin soll es gehen?");
+			System.out.println("1 Kampf");
+			System.out.println("2 Inventar");
+			System.out.println("3 Shop");
+			action=sc.nextInt();
+			switch(action)
+			{
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3: shop.enterShop(player);
+				break;
+			default:
+				break;
+			}
+		}
+		//COMBAT ROUTINE
 		while (combat.isFighting()){	
 			
 
 		System.out.println(player.getName() + " HP: " + player.getHp());
+		//Gegner Lebensanzeige nicht  vergessen
 		System.out.println("Was moechtest du tun?");
 		System.out.println("1. Angreifen");
 		System.out.println("2. Skills");

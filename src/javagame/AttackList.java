@@ -12,9 +12,9 @@ public class AttackList {
 	
 	//Liste der Attacken
 
-	Attack bite = new Attack("Bite", "A vicious bite! Let's hope you don't get rabies!", 0, 50, 0, false, false);
-	Attack hit = new Attack("hit", "voll auf die ömme", 1, 25, 0, false, false);
-	Attack scratch = new Attack("scratch","Aua meine Katze ist boese",2,40,0,false,false);
+	Attack bite = new Attack("Biss", "Hoffentlich hat das Vieh nicht Tollwut!", 0, 50, 0, false, false);
+	Attack hit = new Attack("Hieb", "voll auf die ömme", 1, 25, 0, false, false);
+	Attack scratch = new Attack("Kratzer","Aua meine Katze ist boese",2,40,0,false,false);
 	
 	
 	//Ende der Liste von Attacken
