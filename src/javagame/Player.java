@@ -9,7 +9,7 @@ public class Player {
 	private int hp;
 	private int mp;
 	private int baseStrength;
-	private int bonusStrenght;
+	private int bonusStrength;
 	private int baseIntelect;
 	private int bonusIntelect;
 	private int baseAgility;
@@ -17,9 +17,11 @@ public class Player {
 	private int baseLuck;
 	private int bonusLuck;
 	private int armor;
+	private int bonusArmor;
 	private int resistence;
 	private int dodge;
 	private int initiative;
+	private int bonusInitiative;
 	private Inventory inventory;
 	private int gold;
 	private int dmg;
@@ -86,8 +88,8 @@ public class Player {
 		return baseStrength;
 	}
 
-	public int getBonusStrenght() {
-		return bonusStrenght;
+	public int getBonusStrength() {
+		return bonusStrength;
 	}
 
 	public int getBaseIntelect() {
@@ -169,6 +171,10 @@ public class Player {
 	public void EquipItem(Equipment equipment) {
 		bonusAgility += equipment.getBaseAgility();
 		bonusLuck += equipment.getBaseLuck();
+		bonusStrength += equipment.getBaseStrength();
+		bonusArmor += equipment.getArmor();
+		bonusIntelect += equipment.getBaseIntelect();
+		bonusInitiative += equipment.getInitiative();
 	}
 
 	
