@@ -2,9 +2,19 @@ package javagame;
 
 public class Consumable extends Item{
 	
-	public Consumable(int id, String name, String description, boolean inInventory, boolean usable, int restoredHealth, int cost) {
-		super(id, name, description, inInventory, usable, restoredHealth);
-		// TODO Auto-generated constructor stub
+	
+	
+	public Consumable(int id, String name, String description, boolean inInventory, boolean usable, int cost, 
+			boolean curePoison,int restoredHealth) {
+
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		
+		this.inInventory = inInventory;
+		this.usable = usable;
+		this.curePoison = curePoison;
+		this.restoredHealth = restoredHealth;
 	}
 	public Consumable()
 	{
@@ -13,7 +23,6 @@ public class Consumable extends Item{
 	private int id;
 	private String name;
 	private String description;
-	private int amount;
 	private boolean inInventory;
 	private boolean usable;
 	private boolean curePoison;
@@ -25,9 +34,6 @@ public class Consumable extends Item{
 	}
 	public String getDescription() {
 		return description;
-	}
-	public int getAmount() {
-		return amount;
 	}
 	public boolean isInInventory() {
 		return inInventory;

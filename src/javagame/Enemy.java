@@ -30,16 +30,10 @@ public class Enemy {
 	//Attacks
 	private ArrayList<Attack> attacks = new ArrayList<>();
 	
-	//Lootlists
-	private ArrayList<ItemList> qLoot = new ArrayList<>();	
-	private ArrayList<Consumable> cLoot = new ArrayList<>();
-	private ArrayList<Equipment> eLoot = new ArrayList<>();
-	
 	//Konstruktoren
 	public Enemy() {}
 	public Enemy(String name, String description, int id, int hp, int mp, int baseStrength, int baseIntelect, int baseAgility, int baseLuck,
-				 int armor, int resistance, int dodge, int initiative, int spawnrate, int droppedGold, ArrayList<Attack> attacks,
-				 ArrayList<Consumable> cLoot, ArrayList<Equipment> eLoot) 
+				 int armor, int resistance, int dodge, int initiative, int spawnrate, int droppedGold, ArrayList<Attack> attacks) 
 	{
 		this.name=name;
 		this.id=id;
@@ -56,9 +50,6 @@ public class Enemy {
 		this.spawnrate=spawnrate;
 		this.droppedGold=droppedGold;
 		this.attacks=attacks;
-	
-		this.cLoot=cLoot;
-		this.eLoot=eLoot;
 		
 	}
 	
@@ -77,6 +68,9 @@ public class Enemy {
 	}
 	public int getMp() {
 		return mp;
+	}
+	public void setAttacks(ArrayList<Attack> attacks) {
+		this.attacks = attacks;
 	}
 	public int getBaseStrength() {
 		return baseStrength;
@@ -110,15 +104,6 @@ public class Enemy {
 	}
 	public ArrayList<Attack> getAttacks() {
 		return attacks;
-	}
-	public ArrayList<ItemList> getqLoot() {
-		return qLoot;
-	}
-	public ArrayList<Consumable> getcLoot() {
-		return cLoot;
-	}
-	public ArrayList<Equipment> geteLoot() {
-		return eLoot;
 	}
 	public void setHp(int hp) {
 		this.hp = hp;

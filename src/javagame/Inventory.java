@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class Inventory {
 
 	
+	Scanner showInventory = new Scanner(System.in);
+	
 	private Equipment equipment;
 	private ArrayList<Equipment> inventorylist = new ArrayList<Equipment>();
 	//Create a list for the Items form the Player
@@ -14,16 +16,13 @@ public class Inventory {
 	private ArrayList<Equipment> armor = new ArrayList<Equipment>();
 	private ArrayList<Item> questitem = new ArrayList<Item>();
 
-	
-	public Inventory(Equipment equipment,EquipmentList equipmentlist)
+	public Inventory()
 	{
-		this.equipment=equipment;
-		this.inventorylist=equipmentlist.getEquipmentList();
+		
 	}
 	
 	
 	
-	Scanner showInventory = new Scanner(System.in);
 	
 
 	
@@ -77,28 +76,31 @@ public class Inventory {
 	
 	public void showInventory()
 	{
-		int sh = showInventory.nextInt(0);
+		System.out.println("Was möchten sie sehen?");
+		System.out.println("1. Equipment");
+		System.out.println("2. Consumable");
+		int sh = showInventory.nextInt();
 		
 		switch (sh)
 		{
-		case 3:
+		case 1:
 					System.out.println("Dein Inventar");
 		for(int i = 0;i<this.armor.size();i++)
 			{
 							
-			System.out.println("Ausrüstung: "+inventorylist.get(i).getName());
+			System.out.println("Ausrüstung: "+armor.get(i).getName());
 		
 		}
 		
 			break;
 			
-		case 4:
+		case 2:
 			
 			System.out.println("Deine Verbrauchsgegenstände");
 			
 			for(int i =0;i<this.consumables.size();i++)
 			{
-				System.out.println("Heiltrank: "+inventorylist.get(i).getName());
+				System.out.println("Tränke: "+consumables.get(i).getName());
 			}
 			
 			break;

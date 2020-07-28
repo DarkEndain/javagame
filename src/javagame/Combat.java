@@ -102,6 +102,7 @@ public class Combat {
 		}
 		else
 		{
+			System.out.println("Dir brummt ordentlich der Kopf deswegen setzt du einen Zug aus");
 			player.setStun(false);
 		}
 		
@@ -110,6 +111,14 @@ public class Combat {
 	{ 
 		Random ranaction = new Random();
 		int action = ranaction.nextInt(2);
+		if(enemylist.get(action).isPoison())
+		{
+			player.setPoison(true);
+		}
+		if(enemylist.get(action).isStun())
+		{
+			player.setStun(true);
+		}
 			player.setHp(player.getHp() - (enemylist.get(action).getDamage() - player.getArmor()));
 			System.out.println(npc.getName() 
 					+ " " +enemylist.get(action).getDescription() + " und fügt " 

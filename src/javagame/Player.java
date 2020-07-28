@@ -33,8 +33,8 @@ public class Player {
 	 */
 	public Player()
 	{
-		this.dmg = 20;
-		this.hp = 200;
+		this.dmg = 50;
+		this.hp = 500;
 		this.armor = 10;
 	}
 	
@@ -165,6 +165,10 @@ public class Player {
 	public void addItemToPlayerInventory(Item item)
 	{
 		this.inventory.addItem(item);
+	}
+	public void EquipItem(Equipment equipment) {
+		bonusAgility += equipment.getBaseAgility();
+		bonusLuck += equipment.getBaseLuck();
 	}
 
 	

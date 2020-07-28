@@ -4,6 +4,27 @@ public class Equipment extends Item {
 
 	private int id;
 	private int slotId;
+	public int getHp() {
+		return hp;
+	}
+	public int getBaseStrength() {
+		return baseStrength;
+	}
+	public int getBaseIntelect() {
+		return baseIntelect;
+	}
+	public int getBaseAgility() {
+		return baseAgility;
+	}
+	public int getBaseLuck() {
+		return baseLuck;
+	}
+	public int getArmor() {
+		return armor;
+	}
+	public int getInitiative() {
+		return initiative;
+	}
 	private String name;
 	private String description;
 	private boolean InInventory;

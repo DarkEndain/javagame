@@ -30,8 +30,7 @@ public class Start {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Wie moechten sie heiﬂen?");
 		player.setName(sc.nextLine());
-		System.out.println(enemy.summonEnemy(0).getName() + "erscheint vor dir");
-		Combat combat = new Combat(player, enemy.summonEnemy(0), attacklist, inventory);
+		Combat combat = new Combat(player, enemy.summonEnemy(2), attacklist, inventory);
 		
 		boolean running=true;
 		int action;
@@ -65,6 +64,7 @@ public class Start {
 				}
 				break;
 			case 2:
+				inventory.showInventory();
 				break;
 			case 3: shop.enterShop(player);
 				break;
