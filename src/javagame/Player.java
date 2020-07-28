@@ -178,6 +178,7 @@ public class Player {
 		bonusIntelect += equipment.getBaseIntelect();
 		bonusInitiative += equipment.getInitiative();
 		bonusHp += equipment.getHp();
+		maxHp= hp + bonusHp;
 	}
 
 	
