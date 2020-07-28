@@ -75,19 +75,17 @@ public class Inventory {
 		return questitem;
 	}
 	
-	public void showInventory(int action)
+	public void showInventory()
 	{
-		char sh = showInventory.next().charAt(0);
+		int sh = showInventory.nextInt(0);
 		
-		switch (action)
+		switch (sh)
 		{
 		case 3:
 					System.out.println("Dein Inventar");
 		for(int i = 0;i<this.armor.size();i++)
 			{
-			
-			
-				
+							
 			System.out.println("Ausrüstung: "+inventorylist.get(i).getName());
 		
 		}
@@ -100,7 +98,7 @@ public class Inventory {
 			
 			for(int i =0;i<this.consumables.size();i++)
 			{
-				System.out.println("Heiltrank: ");
+				System.out.println("Heiltrank: "+inventorylist.get(i).getName());
 			}
 			
 			break;
