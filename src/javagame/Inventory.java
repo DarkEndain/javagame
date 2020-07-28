@@ -29,9 +29,11 @@ public class Inventory {
 	//Add a Item to the Inventory
 	public void addItem(Item item)
 	{
+		item.setInInventory(true);
 		if(item instanceof Consumable)
 		{
 			consumables.add((Consumable) item);
+			
 		}
 		else if(item instanceof Equipment)
 		{
@@ -85,10 +87,17 @@ public class Inventory {
 		{
 		case 1:
 					System.out.println("Dein Inventar");
-		for(int i = 0;i<this.armor.size();i++)
+					System.out.println("------------------------------");		
+					for(int i = 0;i<this.armor.size();i++)
 			{
+			String equiped = "";
+			if (armor.get(i).isEquipped())
+			{
+				equiped = "E";
+			}
 							
-			System.out.println("Ausrüstung: "+armor.get(i).getName());
+			System.out.println( " Ausrüstung: "+armor.get(i).getName() + " (" + equiped +")\t\t"  + armor.get(i).getDescription() );
+			
 		
 		}
 		
@@ -97,19 +106,15 @@ public class Inventory {
 		case 2:
 			
 			System.out.println("Deine Verbrauchsgegenstände");
-			
+			System.out.println("---------------------------------");
 			for(int i =0;i<this.consumables.size();i++)
 			{
-				System.out.println("Tränke: "+consumables.get(i).getName());
+				System.out.println("Tränke: "+consumables.get(i).getName() + "\t\t " + consumables.get(i).getDescription());
 			}
 			
 			break;
 			
 			}
-			
-			
-			
-		
-		
 	}
+
 }

@@ -139,25 +139,6 @@ public class Player {
 	public int getGold() {
 		return gold;
 	}
-	public boolean equipItem(Equipment equipment)
-	{
-		if(!equipment.isEquipped())
-		switch(equipment.getSlotId())
-		{
-		case 0:
-			
-		}
-		else
-		{
-			return false;
-		}
-		
-		return false;
-	}
-
-
-
-
 
 	public void setGold(int gold) {
 		this.gold = gold;
@@ -168,13 +149,15 @@ public class Player {
 	{
 		this.inventory.addItem(item);
 	}
-	public void EquipItem(Equipment equipment) {
+	public void equipItem(Equipment equipment) {
+		equipment.setEquipped(true);
 		bonusAgility += equipment.getBaseAgility();
 		bonusLuck += equipment.getBaseLuck();
 		bonusStrength += equipment.getBaseStrength();
 		bonusArmor += equipment.getArmor();
 		bonusIntelect += equipment.getBaseIntelect();
 		bonusInitiative += equipment.getInitiative();
+		hp += equipment.getHp();
 	}
 
 	

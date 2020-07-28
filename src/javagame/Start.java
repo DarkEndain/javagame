@@ -11,6 +11,16 @@ public class Start {
 		eList.fillList();
 		Inventory inventory = new Inventory();
 		Player player = new Player();
+		player.equipItem(eList.getEquipment(0));
+		player.equipItem(eList.getEquipment(3));
+		player.equipItem(eList.getEquipment(5));
+		player.equipItem(eList.getEquipment(8));
+		player.equipItem(eList.getEquipment(11));
+		inventory.addItem(eList.getEquipment(0));
+		inventory.addItem(eList.getEquipment(3));
+		inventory.addItem(eList.getEquipment(5));
+		inventory.addItem(eList.getEquipment(8));
+		inventory.addItem(eList.getEquipment(11));
 		AttackList attacklist = new AttackList();
 		attacklist.fillList();
 		EnemyList enemy = new EnemyList(attacklist);
@@ -22,9 +32,8 @@ public class Start {
 		inventory.addItem(consumable.getConsumable(0));
 
 		
-		inventory.addItem(cList.getConsumable(0));
-		inventory.addItem(eList.getEquipment(0));
-		inventory.addItem(eList.getEquipment(1));
+		//inventory.addItem(cList.getConsumable(0));
+
 		
 		Item item = new Item();
 		Scanner sc = new Scanner(System.in);

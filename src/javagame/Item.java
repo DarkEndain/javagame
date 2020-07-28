@@ -28,6 +28,10 @@ public class Item {
 	{
 		return this.cost;
 	}
+	public void setInInventory(boolean inInventory) {
+		this.inInventory = inInventory;
+	}
+
 
 }
 

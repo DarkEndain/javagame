@@ -42,7 +42,10 @@ public class Combat {
 		}
 	}
 	public void turns(int action, int action2)
-	{
+	{	
+		
+		
+		
 		if (player.isPoison())
 		{
 			player.setHp(player.getHp() - 10);
@@ -102,7 +105,7 @@ public class Combat {
 		}
 		else
 		{
-			System.out.println("Dir brummt ordentlich der Kopf deswegen setzt du einen Zug aus");
+			System.out.println(player.getName() + " ist betauebt und kann sich nicht bewegen!");
 			player.setStun(false);
 		}
 		

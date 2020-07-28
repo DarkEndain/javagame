@@ -60,6 +60,7 @@ public class Equipment extends Item {
 		this.resistance = resistance;
 		this.dodge = dodge;
 		this.initiative = initiative;
+		this.description = description;
 	}
 	public boolean isEquipped() {
 		return equipped;
@@ -78,6 +79,9 @@ public class Equipment extends Item {
 	}
 	public void setSlotId(int slotId) {
 		this.slotId = slotId;
+	}
+	public String getDescription() {
+		return description;
 	}
 	
 	
