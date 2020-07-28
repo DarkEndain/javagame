@@ -30,8 +30,8 @@ public class EnemyList {
 		//eLoot=getEquipmentList();
 		ArrayList<Item> qLoot = new ArrayList<>();
 		//qLoot=getItemList();
-		//Enemy wolf = new Enemy("Wolf", "A common forest wolf", 0, 500, 20, 5, 2, 10, 0, 0, 0, 10, 5, 50, 2,
-							   null, qLoot, cLoot, eLoot);
+		Enemy wolf = new Enemy("Wolf", "A common forest wolf", 0, 500, 20, 5, 2, 10, 0, 0, 0, 10, 5, 50, 2,
+							   null, cLoot, eLoot);
 		enemyList.add(wolf);
 	}
 	
