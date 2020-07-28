@@ -7,6 +7,8 @@ public class Player {
 		this.name = name;
 	}
 	private int hp;
+	private int bonusHp;
+	private int maxHp;
 	private int mp;
 	private int baseStrength;
 	private int bonusStrength;
@@ -35,8 +37,8 @@ public class Player {
 	 */
 	public Player()
 	{
-		this.dmg = 50;
-		this.hp = 500;
+		this.dmg = 100;
+		this.hp = 1500;
 		this.armor = 10;
 	}
 	
@@ -175,6 +177,7 @@ public class Player {
 		bonusArmor += equipment.getArmor();
 		bonusIntelect += equipment.getBaseIntelect();
 		bonusInitiative += equipment.getInitiative();
+		bonusHp += equipment.getHp();
 	}
 
 	
