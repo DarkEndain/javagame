@@ -35,6 +35,7 @@ public class Player {
 	{
 		this.dmg = 20;
 		this.hp = 200;
+		this.armor = 10;
 	}
 	
 	

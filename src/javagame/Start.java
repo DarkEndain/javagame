@@ -46,6 +46,23 @@ public class Start {
 			switch(action)
 			{
 			case 1:
+				while (combat.isFighting()){	
+					
+
+				System.out.println(player.getName() + " HP: " + player.getHp());
+				//Gegner Lebensanzeige nicht  vergessen
+				System.out.println("Was moechtest du tun?");
+				System.out.println("1. Angreifen");
+				System.out.println("2. Skills");
+				System.out.println("3. Inventar");
+				if(sc.next().charAt(0) == '1')
+				{
+					
+					combat.turns(1, 0);
+				}
+				
+
+				}
 				break;
 			case 2:
 				break;
@@ -56,22 +73,7 @@ public class Start {
 			}
 		}
 		//COMBAT ROUTINE
-		while (combat.isFighting()){	
-			
 
-		System.out.println(player.getName() + " HP: " + player.getHp());
-		//Gegner Lebensanzeige nicht  vergessen
-		System.out.println("Was moechtest du tun?");
-		System.out.println("1. Angreifen");
-		System.out.println("2. Skills");
-		System.out.println("3. Inventar");
-		if(sc.next().charAt(0) == '1')
-		{
-			
-			combat.turns(1, 0);
-		}
-
-		}
 		
 		 
 		
