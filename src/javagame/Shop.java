@@ -1,16 +1,27 @@
 package javagame;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Shop {
 
+	Scanner sc= new Scanner(System.in);
 	//Create a list for the Stock from the Shop
-	public ArrayList<Item>  stock = new ArrayList<Item>();
-	
+
+	public ArrayList<Item> stock = new ArrayList<Item>();
+
+	public Shop() {}
 	//Add a Item to the Stock
-	private void addItem(Item item)
+	public void fillStock(ConsumableList cList, EquipmentList eList)
 	{
-		stock.add(item);
+		int i=0;
+		stock.add(cList.getConsumableList().get(0));
+		stock.add(cList.getConsumableList().get(1));
+		for (Equipment equipment : eList.getEquipmentList()) {
+			stock.add(equipment);
+			i++;
+		}
+		
 	}
 	
 	//Delete a Item from the Stock
@@ -20,17 +31,49 @@ public class Shop {
 	}
 	
 	//Buy a Item from the shop
-	private int buyItem(Item item, int playergold)
+	private void buyItem(Item item, Player player)
 	{
-		if (playergold > item.getCost())
+		if (player.getGold() >= item.getCost())
 		{
-			playergold =- item.getCost();
-			
-			return playergold;
+			player.setGold(player.getGold()-item.getCost()); 
+			player.addItemToPlayerInventory(item);
 		}
 		else
 		{
-			return playergold;
+			System.out.println("Nicht genug Gold vorhanden!");
 		}
 	}
+	
+	public void enterShop(Player player)
+	{
+		int action, i=1;
+		boolean inShop=true;
+		
+		while(inShop)
+		{
+		System.out.println("Willkommen in meinem Laden, "+player.getName()+"!");
+		System.out.println(player.getGold()+" Gold verfügbar");
+		System.out.println();
+		for (Item item : stock) {
+			System.out.println((i)+" "+item.getName()+" "+item.getCost()+" Gold");
+			i++;
+			}
+		action=sc.nextInt();
+		
+		System.out.println(i+" Zurueck zur Stadt");
+		if (action==i)
+		{
+			inShop=false;
+		}
+		else
+		{
+			//Check einfügen ob das Item bereits im Inventar ist!!!
+			buyItem(stock.get(action-1), player);
+		}
+		i=1;
+		}
+		
+	}	
+		
+		
 }

@@ -35,6 +35,7 @@ public class Player {
 	{
 		this.dmg = 20;
 		this.hp = 200;
+		this.armor = 10;
 	}
 	
 	
@@ -153,6 +154,18 @@ public class Player {
 	}
 
 
+
+
+
+	public void setGold(int gold) {
+		this.gold = gold;
+	}
+
+
+	public void addItemToPlayerInventory(Item item)
+	{
+		this.inventory.addItem(item);
+	}
 
 	
 }
