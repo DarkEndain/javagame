@@ -7,6 +7,9 @@ public class Player {
 		this.name = name;
 	}
 	private int hp;
+	private int bonushp;
+	private int maxhp;
+
 	private int mp;
 	private int baseStrength;
 	private int bonusStrength;
@@ -37,6 +40,7 @@ public class Player {
 	{
 		this.dmg = 50;
 		this.hp = 500;
+		this.maxhp = 500;
 		this.armor = 10;
 	}
 	
@@ -143,6 +147,9 @@ public class Player {
 	public void setGold(int gold) {
 		this.gold = gold;
 	}
+	public int getMaxhp() {
+		return maxhp;
+	}
 
 
 	public void addItemToPlayerInventory(Item item)
@@ -157,7 +164,8 @@ public class Player {
 		bonusArmor += equipment.getArmor();
 		bonusIntelect += equipment.getBaseIntelect();
 		bonusInitiative += equipment.getInitiative();
-		hp += equipment.getHp();
+		bonushp += equipment.getHp();
+		maxhp = hp + bonushp;
 	}
 
 	

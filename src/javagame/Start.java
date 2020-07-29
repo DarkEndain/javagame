@@ -1,5 +1,6 @@
 package javagame;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Start {
@@ -39,7 +40,7 @@ public class Start {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Wie moechten sie heißen?");
 		player.setName(sc.nextLine());
-		Combat combat = new Combat(player, enemy.summonEnemy(2), attacklist, inventory);
+
 		
 		boolean running=true;
 		int action;
@@ -54,6 +55,8 @@ public class Start {
 			switch(action)
 			{
 			case 1:
+				Random ran = new Random();
+				Combat combat = new Combat(player, enemy.summonEnemy(ran.nextInt(2)), attacklist, inventory);
 				while (combat.isFighting()){	
 					
 
@@ -66,10 +69,18 @@ public class Start {
 				if(sc.next().charAt(0) == '1')
 				{
 					
+					
 					combat.turns(1, 0);
+					
 				}
+				/*else if(sc.next().charAt(0) == '2')
+				{
+					System.out.println("Welchen Skill möchten sie benutzen?");
+					for (int i = 0; i < attacklist.getPlayerAttackList().size(); i++) {
+						System.out.println(i + ": " + attacklist.getPlayerAttackList().get(i).getName());
+					}	
+				}*/
 				
-
 				}
 				break;
 			case 2:

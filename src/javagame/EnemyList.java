@@ -28,8 +28,9 @@ null);
 	{
 		aList.fillList();
 		ArrayList<Attack> attackList = new ArrayList<>();
+		ArrayList<Attack> attackList1 = new ArrayList<>();
 		for (int i = 0; i < 3; i++) {
-			attackList.add(aList.getEnemyAttackList().get(i));	
+			attackList.add((aList.getEnemyAttackList().get(i)));	
 		}
 		//qLoot=getItemList();
 
@@ -38,13 +39,12 @@ null);
 
 		enemyList.get(0).setAttacks(attackList);
 		enemyList.get(1).setAttacks(attackList);
-		attackList.clear();
 		for(int i = 3; i< 6; i++)
 		{
-			attackList.add(aList.getEnemyAttackList().get(i));
+			attackList1.add(aList.getEnemyAttackList().get(i));
 		}
 		enemyList.add(troll);
-		enemyList.get(2).setAttacks(attackList);
+		enemyList.get(2).setAttacks(attackList1);
 	}
 	
 	public Enemy summonEnemy(int id)
