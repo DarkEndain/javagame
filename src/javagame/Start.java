@@ -66,6 +66,7 @@ public class Start {
 				System.out.println("1. Angreifen");
 				System.out.println("2. Skills");
 				System.out.println("3. Inventar");
+				System.out.println("4. Wegrennen!!!");
 				if(sc.next().charAt(0) == '1')
 				{
 					
@@ -87,6 +88,8 @@ public class Start {
 				inventory.showInventory();
 				break;
 			case 3: shop.enterShop(player);
+				break;
+			case 4: combat.isFighting();
 				break;
 			default:
 				break;
