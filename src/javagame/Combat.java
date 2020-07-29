@@ -83,12 +83,12 @@ public class Combat {
 		switch (action) {
 		case 1:
 			npc.setHp(npc.getHp() - player.getDmg() );
-			System.out.println("Spieler hat dem Gegner " + player.getDmg() + " Schaden hinzugefügt");
+			System.out.println( player.getName()+ " hat dem "+npc.getName()  + " "+ player.getDmg() + " Schaden hinzugefügt");
 			break;
 		case 2:
 			npc.setHp(npc.getHp() - playerlist.get(action2).getDamage() + player.getDmg());
-			System.out.println("Spieler benutzt" + playerlist.get(action2).getName() 
-					+ " und fügt dem Gegner" + playerlist.get(action2).getDamage() 
+			System.out.println( player.getName()+" benutzt" + playerlist.get(action2).getName() 
+					+ " und fügt dem "+npc.getName() + playerlist.get(action2).getDamage() 
 					+ player.getDmg() + " Schaden hinzu");
 			break;
 		case 3:
@@ -99,6 +99,14 @@ public class Combat {
 			}
 			player.setHp(player.getHp() + playerconsumablelist.get(action2).getRestoredHealth());
 			System.out.println(player.getName() + " hat " + playerconsumablelist.get(action2).getRestoredHealth() + " Leben geheilt" );
+		
+			break;
+			
+		case 4:
+			
+			fighting = false;
+			System.out.println(player.getName() +" ist dem Gegner entkommen.");
+			break;
 		default:
 			break;
 		}
