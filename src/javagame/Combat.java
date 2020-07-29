@@ -23,7 +23,7 @@ public class Combat {
 		this.player = player;
 		this.npc = npc;
 		this.playerlist = attacklist.getPlayerAttackList();
-		this.enemylist = npc.getAttacks();
+		this.enemylist = this.npc.getAttacks();
 		this.playerconsumablelist = playerconsumablelist.getConsumableInventory();
 		
 	}
@@ -72,6 +72,21 @@ public class Combat {
 		}
 		else
 		{
+			if(player.getHp() <= 0)
+			{
+				System.out.println("Du wurdest von " + npc.getName() + " bewustlos geschlagen und erwachst wieder vollständig gestärkt in der Stadt");
+				player.setHp(player.getMaxhp());
+				//npc.setAttacks(null);
+				npc.setHp(npc.getMaxhp());
+			}
+			else if(npc.getHp() <= 0)
+			{
+				System.out.println("Du hast " + npc.getName() + "besiegt und erhälst " + npc.getDroppedGold() + " Dublonen" );
+				player.setGold(npc.getDroppedGold());
+				player.setHp(player.getMaxhp());
+				//npc.setAttacks(null);
+				npc.setHp(npc.getMaxhp());
+			} 
 			fighting = false;
 		}
 	}

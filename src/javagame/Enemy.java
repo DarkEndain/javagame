@@ -11,6 +11,7 @@ public class Enemy {
 	
 	//Stats
 	private int hp;
+	private int maxhp;
 	private int mp;
 	
 	private int baseStrength;
@@ -32,11 +33,12 @@ public class Enemy {
 	
 	//Konstruktoren
 	public Enemy() {}
-	public Enemy(String name, String description, int id, int hp, int mp, int baseStrength, int baseIntelect, int baseAgility, int baseLuck,
+	public Enemy(String name, String description, int id, int hp,int mp, int baseStrength, int baseIntelect, int baseAgility, int baseLuck,
 				 int armor, int resistance, int dodge, int initiative, int spawnrate, int droppedGold, ArrayList<Attack> attacks) 
 	{
 		this.name=name;
 		this.id=id;
+		this.maxhp = hp;
 		this.hp=hp;
 		this.mp=mp;
 		this.baseStrength=baseStrength;
@@ -53,6 +55,9 @@ public class Enemy {
 		
 	}
 	
+	public int getMaxhp() {
+		return maxhp;
+	}
 	//Getter
 	public String getName() {
 		return name;
@@ -71,6 +76,10 @@ public class Enemy {
 	}
 	public void setAttacks(ArrayList<Attack> attacks) {
 		this.attacks = attacks;
+	}
+	public void addAttacks(Attack attack)
+	{
+		this.attacks.add(attack);
 	}
 	public int getBaseStrength() {
 		return baseStrength;

@@ -18,6 +18,7 @@ public class AttackList {
 	Attack club = new Attack("Keulenhieb","Diese Keule ist so groﬂ!",3,100,0,false,false);
 	Attack babble = new Attack("Labern","DAS M‹SSTET IHR EIGENTLICH K÷NNEN!",4,0,0,true,false);
 	Attack guilty = new Attack("Schlechtes Gewissen","Ihr seid so nutzlos",5,0,0,false,true);
+	Attack trollkiller = new Attack("Berg-Spalter", "Spaltet Berge",6,50,0,false,true);
 	
 	
 	//Ende der Liste von Attacken
@@ -30,6 +31,7 @@ public class AttackList {
 		enemyList.add(club);
 		enemyList.add(babble);
 		enemyList.add(guilty);
+		playerAttackList.add(trollkiller);
 	}
 	
 	public ArrayList<Attack> getEnemyAttackList()
